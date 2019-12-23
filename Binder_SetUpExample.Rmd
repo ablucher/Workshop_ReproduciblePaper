@@ -7,22 +7,17 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-#library(knitr)
-#library(rmarkdown)
+
 library(tidyverse)
-#library(readr)
 #library(here)
 ```
 
 ## R Markdown
 
-Minimal example for R binder set up. Start with only knitr and rmarkdown.
-
-Binder Example here
+Minimal example for R binder set up. Start with just setting up binder through mybinder.org
 
 ```{r}
-x<-4
-x
+#read in our test data file, simple exaple
 testFile<-read_csv("testfile.csv")
 View(testFile)
 
