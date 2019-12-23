@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-library(readr) #try just readr in case the tidyverse package is too big
+#library(readr) #try just readr in case the tidyverse package is too big
 #library(tidyverse)
 #library(here)
 ```
@@ -18,9 +18,11 @@ library(readr) #try just readr in case the tidyverse package is too big
 Minimal example for R binder set up. Start with just setting up binder through mybinder.org
 
 ```{r}
+x<-4
+x+5
 #read in our test data file, simple exaple
-testFile<-read_csv("testfile.csv")
-View(testFile)
+#testFile<-read_csv("testfile.csv")
+#View(testFile)
 
 
 
