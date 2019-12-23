@@ -7,9 +7,9 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(knitr)
-library(rmarkdown)
-#library(tidyverse)
+#library(knitr)
+#library(rmarkdown)
+library(tidyverse)
 #library(readr)
 #library(here)
 ```
@@ -23,8 +23,8 @@ Binder Example here
 ```{r}
 x<-4
 x
-#testFile<-read_csv("testfile.csv")
-#View(testFile)
+testFile<-read_csv("testfile.csv")
+View(testFile)
 
 
 
