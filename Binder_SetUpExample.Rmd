@@ -8,7 +8,8 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-library(tidyverse)
+library(readr) #try just readr in case the tidyverse package is too big
+#library(tidyverse)
 #library(here)
 ```
 
