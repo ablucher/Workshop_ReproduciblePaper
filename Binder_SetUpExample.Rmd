@@ -8,7 +8,7 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 #library(tidyverse)
-library(readr)
+#library(readr)
 #library(here)
 ```
 
@@ -22,8 +22,10 @@ When you click the **Knit** button a document will be generated that includes bo
 Binder Example here
 
 ```{r}
-testFile<-read_csv("testfile.csv")
-View(testFile)
+x<-4
+x
+#testFile<-read_csv("testfile.csv")
+#View(testFile)
 
 
 
