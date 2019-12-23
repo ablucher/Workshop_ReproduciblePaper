@@ -21,7 +21,7 @@ When you click the **Knit** button a document will be generated that includes bo
 Binder Example here
 
 ```{r}
-testFile2<-read_csv("testfile.txt")
+testFile<-read_csv("testfile.csv")
 View(testFile)
 
 
