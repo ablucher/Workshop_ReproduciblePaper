@@ -1,1 +1,1 @@
-install.packages("tidyverse")
+install.packages(c("knitr", "rmarkdown", "tidyverse"))
