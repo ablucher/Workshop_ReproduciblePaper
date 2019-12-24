@@ -17,12 +17,28 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Minimal example for R binder set up. Start with just setting up binder through mybinder.org
 
+
+
 ```{r}
+#testing for binder set up first
 x<-4
 x+5
-#read in our test data file, simple exaple
-#testFile<-read_csv("testfile.csv")
+
+
+#read in our test data file, simple example
+#testFile<-read_csv("testfile.csv")#<-let's use here() package as nice demonstration
 #View(testFile)
+
+
+
+#DEMO OUTLINE
+#read in file
+
+#simple filtering step, i.e. dplyr example<-library dependency here
+
+#make a simple plot - histogram/ barchart
+#ggplot<- library dependency here
+#output plot in markdown
 
 
 
