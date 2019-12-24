@@ -1,5 +1,5 @@
 # Workshop_ReproduciblePaper
-A Practical Guide to Reproducible Papers [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ablucher/Workshop_ReproduciblePaper/master?filepath=rstudio)
+A Practical Guide to Reproducible Papers [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ablucher/Workshop_ReproduciblePaper/master?urlpath=rstudio)
 
 # R markdown file
 Create your R markdown file as usual! But keep track of your libraries, as we will need to tell binder to install all our needed packages in the install.R file.
