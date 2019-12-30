@@ -1,5 +1,5 @@
 ---
-title: "Workshop Binder Example"
+title: "Workshop- Binder Demo"
 author: "Aurora S Blucher"
 date: "12/23/2019"
 output: html_notebook
@@ -7,43 +7,64 @@ output: html_notebook
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
-#library(readr) #try just readr in case the tidyverse package is too big
-#library(tidyverse)
-#library(here)
+library(dplyr)
+library(ggplot2)
+library(here)
 ```
 
-## R Markdown
+## Demo: Creating a barplot of drug-target interactions
 
-Minimal example for R binder set up. Start with just setting up binder through mybinder.org.
-Version uses docker file set-up in repo. 
+Quick example for workshop on binder. We read in some data (drug-target interactions), select a drug of interest (Vandetanib), and make a bar plot so we can see targets that have been found to interact with this drug at a low IC50 value. 
+
+Binder set up through mybinder.org, using docker file set up within the repository. See README for more information. 
+
+```{r}
+#read in our data file
+#which contains drug-target relationships, specified by the assay value (such as an IC50) describing the strength between the drug and target
+fullDrugTargetFile<-read.table(here("data", "Targetome_Evidence_TIPS_101017.txt"), header = TRUE, sep="\t")
+head(fullDrugTargetFile)
+
+#let's see what drugs we have
+drugNames<-fullDrugTargetFile %>%
+  select(Drug) %>%
+  distinct() %>%
+  arrange(Drug)
+
+#137 total drugs here
+drugNames
+```
+
 
 
 
 ```{r}
-#testing for binder set up first
-x<-4
-x+5
+#say we are interested in 1 drug -> vandetanib
+#let's pull all the targets and take al ook
+vandetanibTargets<-fullDrugTargetFile %>%
+  filter(Drug=="Vandetanib")
+head(vandetanibTargets)
 
-
-#read in our test data file, simple example
-#testFile<-read_csv("testfile.csv")#<-let's use here() package as nice demonstration
-#View(testFile)
-
-
-
-#DEMO OUTLINE
-#read in file
-
-#simple filtering step, i.e. dplyr example<-library dependency here
-
-#make a simple plot - histogram/ barchart
-#ggplot<- library dependency here
-#output plot in markdown
-
-
-
-
+#low IC50 means stronger target relationships
+#let's filter to all the targets that had a reported IC50<=100
+vandetanib_under100M<-vandetanibTargets %>%
+  filter(Assay_Type=="IC50" & Assay_Relation=="=" & Assay_Value<=100) %>%
+  arrange(Target_Name, Assay_Value) %>%
+  distinct()
+vandetanib_under100M
 
 ```
+
+```{r}
+
+#make a quick barplot, no frills
+#show the different targets for this drug
+#fill color by target so we can get a nice overview
+barPlot<-vandetanib_under100M %>%
+  group_by(Drug, Target_Name) %>%
+  ggplot(aes(x=Assay_Value, fill=Target_Name), color="black") +
+  geom_bar(width=1)
+barPlot
+
+```
+
 
