@@ -65,6 +65,9 @@ barPlot<-vandetanib_under100M %>%
   geom_bar(width=1)
 barPlot
 
+#save our figure
+ggsave(here("output", "MyFavorite_BarPlot.png"), barPlot)
+
 ```
 
 
