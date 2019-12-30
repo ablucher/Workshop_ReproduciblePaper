@@ -13,8 +13,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libsasl2-dev \
   && install2.r --error \
     --deps TRUE \
-    DT \
-    stringr \
+    dplyr \
+    ggplot2 \
     here 
 COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
