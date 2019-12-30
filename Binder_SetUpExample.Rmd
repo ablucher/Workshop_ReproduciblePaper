@@ -2,7 +2,7 @@
 title: "Workshop Binder Example"
 author: "Aurora S Blucher"
 date: "12/23/2019"
-output: html_document
+output: html_notebook
 ---
 
 ```{r setup, include=FALSE}
@@ -15,7 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-Minimal example for R binder set up. Start with just setting up binder through mybinder.org
+Minimal example for R binder set up. Start with just setting up binder through mybinder.org.
+Version uses docker file set-up in repo. 
 
 
 
