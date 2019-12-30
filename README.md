@@ -18,3 +18,5 @@ You can access a full list of R versions [here].
 
 # install.R 
 This file is where we specify all our packages need to run our R markdown. For instance, here we need 'knitr', 'rmarkdown', and 'tidyverse'. 
+
+# Alternative option- DOCKER file
