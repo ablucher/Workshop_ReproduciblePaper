@@ -7,8 +7,8 @@ Binder let's us capture the exact R environment we used for our analysis. Using 
 
 ## GitHub Repository (make sure it's public!)
 
-## R markdown file
-Create your R markdown file as usual! But keep track of your libraries, as we will need to tell binder to install all our needed packages.
+## R markdown notebook
+Create your R markdown notebook as usual! But keep track of your libraries, as we will need to tell binder to install all our needed packages.
 
 In our example script, we just read in a simple data set, do some filtering, and create a barplot.
 
