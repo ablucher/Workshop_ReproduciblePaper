@@ -1,5 +1,4 @@
-# Workshop_ReproduciblePaper
-A Practical Guide to Reproducible Papers [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ablucher/Workshop_ReproduciblePaper/master?urlpath=rstudio)
+# A Practical Guide to Reproducible Papers [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ablucher/Workshop_ReproduciblePaper/master?urlpath=rstudio)
 
 Binder let's us capture the exact R environment we used for our analysis. Using binderHub, we can host our R markdown notebook inside an RStudio session in the cloud, which allows users to recreate or modify our analysis. Any changes users make won't be saved; modifications have to be made on our end through repository commits. 
 
