@@ -12,19 +12,13 @@ Create your R markdown notebook as usual! But keep track of your libraries, as w
 
 In our example script, we just read in a simple data set, do some filtering, and create a barplot.
 
-## DOCKER file
-Here, we set up using a DOCKER file, which can be found in the binder folder. 
-
-
-# Option 2. Alternate set up for binder
-Instead of using a DOCKER file, we can set up our repository using a runtime.txt file and an install.R file. 
+## Configuration for Binder
+We need to include two additional files in our repository to get set up for binder. 
 
 # runtime.txt
 This file is where we specify our R environment (R version) using the following syntax:
 r-YYYY-MM-DD
 
-You can access a full list of R versions [here].
-
 # install.R 
-This file is where we specify all our packages need to run our R markdown. For instance, here we need 'knitr', 'rmarkdown', and 'tidyverse'. 
+This file is where we specify all our packages need to run our R markdown. For instance, here we need 'knitr', 'rmarkdown', 'dplyr', 'ggplot2' and 'here'. 
 
