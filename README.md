@@ -14,10 +14,11 @@ In our example script, we just read in a simple data set, do some filtering, and
 ## Configuration for Binder
 We need to include two additional files in our repository to get set up for binder. 
 
-# runtime.txt
-This file is where we specify our R environment (R version) using the following syntax:
+### runtime.txt
+The [runtime.txt](https://github.com/ablucher/Workshop_ReproduciblePaper/blob/master/runtime.txt) file is where we specify our R environment (R version) using the following syntax:
+
 r-YYYY-MM-DD
 
-# install.R 
-This file is where we specify all our packages need to run our R markdown. For instance, here we need 'knitr', 'rmarkdown', 'dplyr', 'ggplot2' and 'here'. 
+### install.R 
+The [install.R](https://github.com/ablucher/Workshop_ReproduciblePaper/blob/master/install.R) is where we specify all our packages need to run our R markdown. For instance, here we need 'knitr', 'rmarkdown', 'dplyr', 'ggplot2' and 'here'. 
 
