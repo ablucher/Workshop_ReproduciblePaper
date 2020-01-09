@@ -23,7 +23,9 @@ Binder set up through mybinder.org, using docker file set up within the reposito
 #which contains drug-target relationships, specified by the assay value (such as an IC50) describing the strength between the drug and target
 fullDrugTargetFile<-read.table(here("data", "Targetome_Evidence_TIPS_101017.txt"), header = TRUE, sep="\t")
 head(fullDrugTargetFile)
+```
 
+```{r}
 #let's see what drugs we have
 drugNames<-fullDrugTargetFile %>%
   select(Drug) %>%
@@ -43,7 +45,9 @@ drugNames
 vandetanibTargets<-fullDrugTargetFile %>%
   filter(Drug=="Vandetanib")
 head(vandetanibTargets)
+```
 
+```{r}
 #low IC50 means stronger target relationships
 #let's filter to all the targets that had a reported IC50<=100
 vandetanib_under100M<-vandetanibTargets %>%
