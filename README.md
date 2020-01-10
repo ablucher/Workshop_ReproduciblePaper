@@ -22,3 +22,6 @@ r-YYYY-MM-DD
 ### install.R 
 The [install.R](https://github.com/ablucher/Workshop_ReproduciblePaper/blob/master/install.R) is where we specify all our packages need to run our R markdown. For instance, here we need 'knitr', 'rmarkdown', 'dplyr', 'ggplot2' and 'here'. 
 
+# Acknowledgements
+This work was supported by OHSU's BioData Club, and the following grant:
+BioData Club: A Partnership Model for Data Management and Data Science Education, NLM UG4LM012344
